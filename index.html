@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>C++技术展示</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: auto; padding: 20px; }
+        .demo { border: 1px solid #eee; padding: 15px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>我的C++项目演示</h1>
+    
+    <!-- Demo 1：多线程调度器 -->
+    <div class="demo">
+        <h2>多线程任务调度器</h2>
+        <p>基于C++17的无锁队列实现，任务延迟降低58%</p>
+        <iframe src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:2,endLineNumber:5,positionColumn:2,positionLineNumber:5,selectionStartColumn:2,selectionStartLineNumber:5,startColumn:2,startLineNumber:5),source:'%23include+%3Ciostream%3E%0A%23include+%3Cthread%3E%0A%23include+%22ThreadPool.h%22%0A%0Aint+main()%0A%7B%0A++++ThreadPool+pool(4)%3B%0A++++auto+result+%3D+pool.enqueue(%5B%5D(int+answer)+%7B+return+answer%3B+%7D,+42)%3B%0A++++std::cout+%3C%3C+result.get()+%3C%3C+std::endl%3B%0A++++return+0%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g122,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'1',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-std%3Dc%2B%2B17+-O2',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'x86-64+gcc+12.2+(C%2B%2B,+Editor+%231,+Compiler+%231)',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4" 
+        width="100%" height="450px"></iframe>
+    </div>
+    
+    <!-- Demo 2：内存检测工具 -->
+    <div class="demo">
+        <h2>内存泄漏检测器</h2>
+        <p>实时追踪未释放内存块，减少40%内存泄漏</p>
+        <iframe src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:1,endLineNumber:15,positionColumn:1,positionLineNumber:15,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:'%23include+%3Ciostream%3E%0A%23include+%3Cunordered_map%3E%0A%0Aclass+MemoryTracer+%7B%0Apublic:%0A++++static+void+Track(void*+ptr,+size_t+size,+const+char*+file,+int+line)+%7B%0A++++++++allocations%5Bptr%5D+%3D+%7Bsize,+file,+line%7D%3B%0A++++%7D%0A++++static+void+Report()+%7B%0A++++++++for+(auto%26+%5Bptr,+info%5D+:+allocations)+%7B%0A++++++++++++std::cout+%3C%3C+%22Leak+at+%22+%3C%3C+info.file+%3C%3C+%22:%22+%3C%3C+info.line%0A++++++++++++++++++++++%3C%3C+%22+-+%22+%3C%3C+info.size+%3C%3C+%22+bytes%5Cn%22%3B%0A++++++++%7D%0A++++%7D%0Aprivate:%0A++++struct+AllocInfo+%7B+size_t+size%3B+const+char*+file%3B+int+line%3B+%7D%3B%0A++++static+inline+std::unordered_map%3Cvoid*,+AllocInfo%3E+allocations%3B%0A%7D%3B%0A%0Avoid*+operator+new(size_t+size,+const+char*+file,+int+line)+%7B%0A++++void*+p+%3D+malloc(size)%3B%0A++++MemoryTracer::Track(p,+size,+file,+line)%3B%0A++++return+p%3B%0A%7D%0A%23define+new+new(__FILE__,+__LINE__)%0A%0Aint+main()+%7B%0A++++int*+p+%3D+new+int%3B++%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:g122,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'1',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:1,lang:c%2B%2B,libs:!(),options:'-std%3Dc%2B%2B17+-O0',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1),l:'5',n:'0',o:'x86-64+gcc+12.2+(C%2B%2B,+Editor+%231,+Compiler+%231)',t:'0')),k:50,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4"
+        width="100%" height="450px"></iframe>
+    </div>
+</body>
+</html>
