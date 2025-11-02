@@ -1,0 +1,76 @@
+{
+    "skills": [
+        {
+            "id": "cpp",
+            "name": "C++",
+            "category": "language_framework",
+            "status": "active"
+        },
+        {
+            "id": "flutter",
+            "name": "Flutter",
+            "category": "language_framework",
+            "status": "experimental"
+        },
+        {
+            "id": "dart",
+            "name": "Dart",
+            "category": "language_framework",
+            "status": "experimental"
+        },
+        {
+            "id": "opencv",
+            "name": "OpenCV",
+            "category": "vision_system",
+            "status": "experimental"
+        },
+        {
+            "id": "cmake",
+            "name": "CMake",
+            "category": "build_tooling",
+            "status": "learning"
+        },
+        {
+            "id": "vcpkg",
+            "name": "vcpkg",
+            "category": "build_tooling",
+            "status": "learning"
+        },
+        {
+            "id": "cmake_presets",
+            "name": "CMakePresets",
+            "category": "build_tooling",
+            "status": "learning"
+        },
+        {
+            "id": "visual_studio",
+            "name": "Visual Studio",
+            "category": "platform_tool",
+            "status": "proficient"
+        },
+        {
+            "id": "git",
+            "name": "Git",
+            "category": "platform_tool",
+            "status": "proficient"
+        },
+        {
+            "id": "github_pages",
+            "name": "GitHub Pages",
+            "category": "platform_tool",
+            "status": "learning"
+        },
+        {
+            "id": "windows",
+            "name": "Windows",
+            "category": "platform_tool",
+            "status": "active"
+        },
+        {
+            "id": "web",
+            "name": "Web",
+            "category": "platform_tool",
+            "status": "learning"
+        }
+    ]
+}

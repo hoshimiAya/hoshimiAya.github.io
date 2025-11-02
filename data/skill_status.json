@@ -1,0 +1,24 @@
+{
+    "statuses": [
+        {
+            "id": "active",
+            "name": "常用",
+            "description": "在多个项目中频繁使用，已形成肌肉记忆。"
+        },
+        {
+            "id": "proficient",
+            "name": "熟悉",
+            "description": "能独立完成任务，偶尔查文档。"
+        },
+        {
+            "id": "learning",
+            "name": "学习中",
+            "description": "正在探索，已有基本理解。"
+        },
+        {
+            "id": "experimental",
+            "name": "实验中",
+            "description": "用于原型或尝试性项目，尚未稳定掌握。"
+        }
+    ]
+}

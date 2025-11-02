@@ -1,0 +1,24 @@
+{
+    "categories": [
+        {
+            "id": "language_framework",
+            "name": "语言与框架",
+            "description": "用于构建应用的编程语言和开发框架。"
+        },
+        {
+            "id": "vision_system",
+            "name": "图像处理与系统",
+            "description": "支持图像分析、系统桥接和跨平台运行的技术。"
+        },
+        {
+            "id": "build_tooling",
+            "name": "构建与依赖管理",
+            "description": "用于项目构建、依赖安装和环境配置的工具。"
+        },
+        {
+            "id": "platform_tool",
+            "name": "工具与平台",
+            "description": "辅助开发、部署和版本控制的工具与平台。"
+        }
+    ]
+}
